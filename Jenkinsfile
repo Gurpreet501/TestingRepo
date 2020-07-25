@@ -1,6 +1,6 @@
 node{
 	
-	def buildno=BUILD_NUMBER
+	def buildnumber=BUILD_NUMBER
     def mavenHome = tool name: 'Maven', type: 'maven'
     def mavenCommand = "${mavenHome}/bin/mvn "
 
