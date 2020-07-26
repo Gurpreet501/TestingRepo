@@ -1,4 +1,4 @@
 FROM openjdk:8
-ADD target/TestingRepo.jar TestingRepo.jar
+ADD target/testingrepo.jar testingrepo.jar
 EXPOSE 9001
-ENTRYPOINT  ["java","-jar","/TestingRepo.jar"]
+ENTRYPOINT  ["java","-jar","/testingrepo.jar"]
