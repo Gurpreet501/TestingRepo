@@ -18,4 +18,9 @@ public class DemoApplication {
 		return "Hello First API!!!";
 	}
 
+	
+	@GetMapping("/")
+	public String get() {
+		return "Aws application deployed!!!";
+	}
 }
