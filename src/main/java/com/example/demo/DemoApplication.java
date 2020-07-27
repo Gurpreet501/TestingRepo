@@ -28,4 +28,9 @@ public class DemoApplication {
 	public String gett() {
 		return "well played!!!";
 	}
+	
+	@GetMapping("/vijay")
+	public String g() {
+		return "well played too!!!";
+	}
 }
