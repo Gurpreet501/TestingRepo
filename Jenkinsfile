@@ -25,4 +25,16 @@ stage("docker image push to dockerhub")
  sh "docker push gurpreet501/testingrepo:${buildnumber}"
 }
 
+
+stage("Running Application"){
+            sshagent(['dockerserver']) {
+                sh "ssh -o StrictHostKeyChecking=no ubuntu@172.31.49.41 docker rm -f javawebappcontainer || true"
+                sh "ssh -o StrictHostKeyChecking=no ubuntu@172.31.49.41 docker run -d -p 9001:9001 --name javawebappcontainer gurpreet501/testingrepo:${buildnumber}"
+            }
+        }
+
+
+
+
+
 }
