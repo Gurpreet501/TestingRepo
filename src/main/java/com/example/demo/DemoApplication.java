@@ -23,4 +23,9 @@ public class DemoApplication {
 	public String get() {
 		return "Aws application deployed!!!";
 	}
+	
+	@GetMapping("/gupi")
+	public String gett() {
+		return "well played!!!";
+	}
 }
